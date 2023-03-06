@@ -7,59 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Keeper</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
-    <style>
-        .winner {
-            color: green;
-        }
-
-        .loser {
-            color: red;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="columns">
-            <div class="column is-half is-offset-one-quarter">
-                <div class="card">
-                    <header class="card-header">
-                        <p class="card-header-title">
-                            Smash Bros Scorekeeper
-                        </p>
-                    </header>
-                    <div class="card-content">
-                        <div class="content">
-                            <h2 class="title is-2">Score:</h2>
-                            <h1 class="title is-1"><span id="p1Display">0</span> to <span id="p2Display">0</span></h2>
-                                <p class="subtitle">Use buttons below to change score</p>
-                                <label for="playTo" class="label is-large is-inline">Playing To:</label>
-                            <div class="select is-rounded">
-                                <select name="" id="playTo">
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                </select>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image" is-2by1>
+                                <img src="smashbros.webp" alt="Smash Bros Logo">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Smash Bros Scorekeeper
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <h2 class="title is-2">Score:</h2>
+                                <h1 class="title is-1"><span id="p1Display">0</span> to <span id="p2Display">0</span>
+                                    </h2>
+                                    <p class="subtitle">Use buttons below to change score</p>
+                                    <label for="playTo" class="label is-large is-inline">Playing To:</label>
+                                    <div class="select is-rounded">
+                                        <select name="" id="playTo">
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                        </select>
+                                    </div>
                             </div>
                         </div>
-                    </div>
-                    <footer class="card-footer">
-                        <!-- Remember the is-primary info danger button classes give different colors but I'm not
+                        <footer class="card-footer">
+                            <!-- Remember the is-primary info danger button classes give different colors but I'm not
                         necessarily saying that I'm warning the user of danger or informing or anything... though
                         that syntax could help me if I am trying to use it as such-->
-                        <button id="player1Button" class="is-primary button card-footer-item">+1 Player One</button>
-                        <button id="player2Button" class="is-info button card-footer-item">+1 Player Two</button>
-                        <button id="reset" class="is-danger button card-footer-item">Reset</button>
-                    </footer>
+                            <button id="player1Button" class="is-primary button card-footer-item is-large">+1 Player
+                                One</button>
+                            <button id="player2Button" class="is-info button card-footer-item is-large">+1 Player
+                                Two</button>
+                            <button id="reset" class="is-danger button card-footer-item is-large">Reset</button>
+                        </footer>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- <img src="smashbros.webp" height="200px" width="400px"> -->
+    </section>
 
 
     <script src="app.js"></script>

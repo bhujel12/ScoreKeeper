@@ -16,8 +16,10 @@ playerOneButton.addEventListener('click', () => {
         playerOneScore += 1;
         if (playerOneScore === winningScore) {
             isGameOver = true;
-            p1Display.classList.add('winner');
-            p2Display.classList.add('loser');
+            p1Display.classList.add('has-text-success');
+            p2Display.classList.add('has-text-danger');
+            playerOneButton.disabled = true;
+            playerTwoButton.disabled = true;
         }
         p1Display.textContent = playerOneScore;
     }
@@ -28,8 +30,10 @@ playerTwoButton.addEventListener('click', () => {
         playerTwoScore += 1;
         if (playerTwoScore === winningScore) {
             isGameOver = true;
-            p2Display.classList.add('winner');
-            p1Display.classList.add('loser');
+            p2Display.classList.add('has-text-success');
+            p1Display.classList.add('has-text-danger');
+            playerOneButton.disabled = true;
+            playerTwoButton.disabled = true;
         }
         p2Display.textContent = playerTwoScore;
     }
@@ -55,7 +59,9 @@ function resetGame() {
     playerTwoScore = 0;
     p1Display.textContent = 0;
     p2Display.textContent = 0;
+    playerOneButton.disabled = false;
+    playerTwoButton.disabled = false;
     isGameOver = false;
-    p1Display.classList.remove('winner', 'loser');
-    p2Display.classList.remove('winner', 'loser');
+    p1Display.classList.remove('has-text-success', 'has-text-danger');
+    p2Display.classList.remove('has-text-success', 'has-text-danger');
 }
